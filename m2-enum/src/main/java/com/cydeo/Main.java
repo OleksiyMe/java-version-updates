@@ -13,7 +13,7 @@ public class Main {
 
         System.out.println("How to access a constant");
 
-        Currency c = Currency.DIME;
+        Currency c2= Currency.DIME;
         System.out.println(c);
         System.out.println(Currency.PENNY);
 
