@@ -14,6 +14,7 @@ public class Team<T extends Player> {  //Any class you can pass to Team. Should 
     }
 
     public String getName() {
+
         return name;
     }
 
