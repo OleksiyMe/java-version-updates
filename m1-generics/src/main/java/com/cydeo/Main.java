@@ -48,6 +48,7 @@ public class Main {
     }
 
     private static void printDoubled(ArrayList<Integer> items) {
+
         for(Integer i : items){
             System.out.println(i*2);
         }
