@@ -9,6 +9,8 @@ public class Main {
 
         Apple a = new Apple(5);
 
+        CurrencyDemo c=CurrencyDemo.DIME;
+
         System.out.println("How to access a constant");
 
         Currency c = Currency.DIME;
