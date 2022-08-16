@@ -2,6 +2,7 @@ package com.cydeo.Apples.ApplesByOzzy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class OrangeTest {
 
@@ -16,27 +17,43 @@ public class OrangeTest {
 
         OrangeFormatter orangeLambda = orange -> "An orange of " + orange.getWeight() + "g";
 
-        printApple(inventory, orangeLambda);
+        printOrange(inventory, orangeLambda);
         System.out.println("==============================");
-        printApple(inventory, orange -> {
+        printOrange(inventory, orange -> {
             if (orange.getColor().equals(Color.GREEN)) return orange.toString();
             else return "Not GREEN";
         });
         System.out.println("======");
-        printApple(inventory,orange -> {
+        printOrange(inventory,orange -> {
             if (orange.getWeight()>100) return "heavy "+"An orange of " + orange.getWeight() + "g";
             else return "light "+"An orange of " + orange.getWeight() + "g";
 
         });
 
+        System.out.println("New lines below");
+        printOrange1(inventory, orange -> orange.getWeight()>100);
+
+
     }
 
-    private static void printApple(List<Orange> list, OrangeFormatter o) {
+    private static void printOrange(List<Orange> list, OrangeFormatter o) {
 
         for (Orange orange : list) {
 
             String output = o.test(orange);
             System.out.println(output);
+
+        }
+
+    }
+
+
+    private static void printOrange1(List<Orange> list, Predicate<Orange> p) {
+
+        for (Orange orange : list) {
+
+            if (p.test(orange)) System.out.println(orange);
+
 
         }
 

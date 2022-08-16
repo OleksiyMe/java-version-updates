@@ -2,6 +2,7 @@ package com.cydeo.Apples.ApplesByOzzy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class AppleTest {
     public static void main(String[] args) {
@@ -16,7 +17,7 @@ public class AppleTest {
         inventory.forEach(e -> System.out.println(e));
 
 
-        List<Apple> heavyApple = filterApples(inventory, new AllpeHeavyPredicate());
+      /*  List<Apple> heavyApple = filterApples(inventory, new AllpeHeavyPredicate());
         System.out.println("heavyApple = " + heavyApple);
         List<Apple> greenApple = filterApples(inventory, new AppleGreenCplorPredicate());
         System.out.println("greenApple = " + greenApple);
@@ -24,8 +25,12 @@ public class AppleTest {
 
         ApplePredicate weightApple = apple -> apple.getWeight() > 200;
 
-        filterApples(inventory, weightApple);
-
+       // filterApples(inventory, weightApple);
+*/
+        System.out.println("========");
+        System.out.println(filterApples(inventory, apple -> apple.getWeight() > 200));
+        System.out.println("========");
+        System.out.println(filterApples(inventory, apple -> apple.getColor().equals(Color.GREEN) ));
 
     }
 
@@ -40,4 +45,18 @@ public class AppleTest {
         }
         return result;
     }
+
+    private static List<Apple> filterApples1(List<Apple> inventory, Predicate<Apple> p) {
+
+        List<Apple> result = new ArrayList<>();
+
+        for (Apple apple : inventory) {
+            if (p.test(apple)) {
+                result.add(apple);
+            }
+        }
+        return result;
+    }
+
+
 }
