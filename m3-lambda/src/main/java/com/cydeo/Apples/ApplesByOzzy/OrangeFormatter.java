@@ -1,6 +1,4 @@
-package com.cydeo.ApplesByOzzy;
-
-import java.util.List;
+package com.cydeo.Apples.ApplesByOzzy;
 
 @FunctionalInterface
 public interface OrangeFormatter {

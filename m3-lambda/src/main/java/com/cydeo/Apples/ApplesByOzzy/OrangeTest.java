@@ -1,4 +1,4 @@
-package com.cydeo.ApplesByOzzy;
+package com.cydeo.Apples.ApplesByOzzy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,13 @@ public class OrangeTest {
         System.out.println("==============================");
         printApple(inventory, orange -> {
             if (orange.getColor().equals(Color.GREEN)) return orange.toString();
-            else return null;
+            else return "Not GREEN";
+        });
+        System.out.println("======");
+        printApple(inventory,orange -> {
+            if (orange.getWeight()>100) return "heavy "+"An orange of " + orange.getWeight() + "g";
+            else return "light "+"An orange of " + orange.getWeight() + "g";
+
         });
 
     }

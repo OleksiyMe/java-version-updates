@@ -1,4 +1,4 @@
-package com.cydeo.ApplesByOzzy;
+package com.cydeo.Apples.ApplesByOzzy;
 
 public interface ApplePredicate {
 

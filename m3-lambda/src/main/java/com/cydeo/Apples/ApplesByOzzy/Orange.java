@@ -1,4 +1,4 @@
-package com.cydeo.ApplesByOzzy;
+package com.cydeo.Apples.ApplesByOzzy;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,8 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
-public class Apple {
-    private  int weight;
+public class Orange {
+    private int weight;
     private Color color;
 
 
