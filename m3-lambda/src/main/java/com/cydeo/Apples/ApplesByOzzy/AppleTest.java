@@ -13,18 +13,18 @@ public class AppleTest {
         inventory.add(new Apple(200, Color.GREEN));
         inventory.add(new Apple(50, Color.RED));
 
+        inventory.forEach(e -> System.out.println(e));
 
-        List<Apple> heavyApple=filterApples(inventory, new AllpeHeavyPredicate());
+
+        List<Apple> heavyApple = filterApples(inventory, new AllpeHeavyPredicate());
         System.out.println("heavyApple = " + heavyApple);
-        List<Apple> greenApple=filterApples(inventory, new AppleGreenCplorPredicate());
+        List<Apple> greenApple = filterApples(inventory, new AppleGreenCplorPredicate());
         System.out.println("greenApple = " + greenApple);
         System.out.println("========================================");
 
-       ApplePredicate weightApple = apple-> apple.getWeight()>200;
+        ApplePredicate weightApple = apple -> apple.getWeight() > 200;
 
-       filterApples(inventory, weightApple);
-
-
+        filterApples(inventory, weightApple);
 
 
     }

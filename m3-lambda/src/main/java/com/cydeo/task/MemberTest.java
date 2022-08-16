@@ -10,7 +10,7 @@ public class MemberTest {
         Person p1 = new Person("Mike", 22, Gender.MALE, "@");
         Person p2 = new Person("Ozzy", 22, Gender.MALE, "@");
         Person p3 = new Person("Oleksiy", 46, Gender.MALE, "@");
-        Person p4 = new Person("Diana", 22, Gender.FEMALE, "@");
+        Person p4 = new Person("Anna", 22, Gender.FEMALE, "@");
         Person p5 = new Person("H", 22, Gender.MALE, "@");
         Person p6 = new Person("Sumeye", 22, Gender.FEMALE, "@");
         Person p7 = new Person("Alena", 30, Gender.MALE, "@");
@@ -23,11 +23,11 @@ public class MemberTest {
 
     }
 
-    private static void printSelected(List<Person> personlist, CheckMember check) {
+    private static void printSelected(List<Person> personlist, CheckMember checkAction) {
         List<Person> result = new ArrayList<>();
         for (Person each : personlist) {
 
-            if (check.test(each)) {
+            if (checkAction.test(each)) {
                 result.add(each);
             }
 
