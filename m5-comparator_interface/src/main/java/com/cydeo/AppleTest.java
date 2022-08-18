@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class AppleTest {
@@ -16,6 +17,7 @@ public class AppleTest {
 
         inventory.forEach(e -> System.out.println(e));
 
+        Comparator<Apple>  sortApple =Comparator.comparing((Apple apple)->
 
 
 }
