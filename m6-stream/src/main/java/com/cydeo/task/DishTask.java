@@ -35,13 +35,15 @@ public class DishTask {
         out.println("3 dishes >300 calories");
         menu.stream()
                 .filter(i->i.getCalories()>300)
+                .map(Dish::getName)
                 .limit(3)
                 .forEach(out::println);
 
         out.println("dishes <400 calories sorted");
         menu.stream()
                 .filter(i->i.getCalories()<400)
-                .sorted(Comparator.comparing(Dish::getName))
+                .sorted(Comparator.comparing(Dish::getCalories))
+                .map(Dish::getName)
                 .forEach(out::println);
 
     }
