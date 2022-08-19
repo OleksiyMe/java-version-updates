@@ -22,9 +22,9 @@ public class Calculator {
         System.out.println("\nThe same with Method Reference");
         //example with a reference variable for method reference
         Function<Double, Double> f3 = Math::sqrt;
-        System.out.println("SQRT from 1000 is " + calculate(1000d, f3));
+        System.out.println("SQRT from 10000 is " + calculate(10000d, f3));
         //example with a method reference as an argument
-        System.out.println("SQRT from 1000 is " + calculate(1000d, Math::sqrt));
+        System.out.println("SQRT from 10000 is " + calculate(10000d, Math::sqrt));
 
         //example with a reference variable for method reference
         Function<Integer, Double> f4 = Math::cos;
