@@ -22,8 +22,8 @@ public class Main {
 
         List<Course> myCourses = Arrays.asList(
                 new Course("Java", 100),
-                new Course("DS"101),
-                new Course("MS", 102),
+                new Course("DS",101),
+                new Course("MS", 102)
                 );
 
         Stream<Course> myCoureseStream = myCourses.stream();
