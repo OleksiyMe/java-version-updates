@@ -18,7 +18,7 @@ public class Calculator {
         //example with a lambda expression as an argument
         System.out.println("Sin from 30 is " + calculate(30, x -> Math.sin(x)));
 
- //==============================================================================================
+        //==============================================================================================
         System.out.println("\nThe same with Method Reference");
         //example with a reference variable for method reference
         Function<Double, Double> f3 = Math::sqrt;
@@ -29,8 +29,17 @@ public class Calculator {
         //example with a reference variable for method reference
         Function<Integer, Double> f4 = Math::cos;
         System.out.println("Cos from 30 is " + calculate(30, f4));
-        //example with a method reference as an argument -- doesn't work
-        // System.out.println("Sin from 30 is "+calculate(30, Math::cos) );
+        //example with a method reference as an argument
+        System.out.println("Sin from 30 is " + calculate(30.0, Math::cos));
+        System.out.println("Sin from 30 is " + calculate(30d, Math::cos));
+
+        // Example with a String as a result
+        Function<Double, String> f5 = x ->"" + Math.sqrt(x);
+        System.out.println("SQRT from 100 is " + calculate(100d, f5));
+        System.out.println(
+                "SQRT from 100 is " + calculate(100d, x -> "" + Math.sqrt(x))
+        );
+
 
     }
 

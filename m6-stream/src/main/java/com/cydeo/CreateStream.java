@@ -1,11 +1,10 @@
 package com.cydeo;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class Main {
+public class CreateStream {
     public static void main(String[] args) {
 
 //Creating stream of array
@@ -27,6 +26,11 @@ public class Main {
                 );
 
         Stream<Course> myCoureseStream = myCourses.stream();
+
+        //Creating Stream Values
+
+        Stream<Integer> stream =Stream.of(1,2,3,4,5,6);
+
 
 
 
