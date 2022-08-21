@@ -65,6 +65,12 @@ public class FindingMatching {
         Optional<Dish> dishMax= DishData.getAll().stream().max(Comparator.comparing(Dish::getCalories));
 
         System.out.println(dishMax.get());
+
+    Integer totalCal= DishData.getAll().stream().map(Dish::getCalories).reduce(0,(a,b)->a+b);
+
+        System.out.println("totalCal = " + totalCal);
+
+        Integer totalCa2= DishData.getAll().stream().map(Dish::getCalories).reduce(0, Integer::sum);
     }
 
 
