@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SwitchCaseDemo {
     public static void main(String[] args) {
 
-        var month = 4;
+        var month = 2;
         switch (month) {
             case 1:
             case 3:
@@ -59,9 +59,9 @@ public class SwitchCaseDemo {
             }
 
         default -> 0;
-    }
+    };
 
-    ;
+        System.out.println(day2);
 
 }
 }
