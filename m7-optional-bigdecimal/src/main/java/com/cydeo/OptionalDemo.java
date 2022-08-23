@@ -25,6 +25,7 @@ public class OptionalDemo {
         //ifPresent()
 
         Optional<Integer> bigNumber = number.stream().filter(x -> x > 100).findAny();
+
         bigNumber.ifPresent(System.out::println);
 
         //get
